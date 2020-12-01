@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="eng">
+<meta charset="utf-8">
+
+<head>
+    <title>HTML Table pagelayout</title>
+</head>
+
+<body style="margin: 0px;">
+    <table cellspacing=0 style="height: 100%; width: 100%; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+        <tr>
+            <td colspan="2" style="padding: 10px 20px; background-color: #bacc15; text-align: center;">
+                <h1 style="font-family: cursive; font-style: italic; font-size: 24px;"> Header - Codekul training institute</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 30px; background-color: crimson; ">
+                <h1 style="vertical-align: text-top;">Navigation</h1>
+                ul {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 25%;
+                    background-color: #f1f1f1;
+                    height: 100%; /* Full height */
+                    position: fixed; /* Make it stick, even on scroll */
+                    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+                  }
+                  
+                li a {
+                    display:block
+                }
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
+                
+            </td>
+
+            <td style="padding: 30px; background-color:#228b22;">
+                <h1>Content</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt
+                    nibh pulvinar a. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec sollicitudin
+                    molestie malesuada. Nulla porttitor accumsan tincidunt. Nulla quis lorem ut libero malesuada
+                    feugiat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet
+                    elit, eget tincidunt nibh pulvinar a. Sed porttitor lectus nibh. Sed porttitor lectus nibh.
+                </p>
+
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2" style="padding: 5px; background-color:aqua; text-align: center;">
+                <p>Footer</p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+.collapsible { 
+  background-color:
+  color: white; 
+  cursor: pointer; 
+  padding: 18px; 
+  width: 50%; 
+  border: none; 
+  text-align: left; 
+  outline: none; 
+  font-size: 15px; 
+} 
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: left;
+  margin-right: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+ 
+.active, .collapsible:hover { 
+  background-color: rgb(218, 221, 33); 
+} 
+ 
+.content { 
+  width: 50%;
+  padding: 0 18px; 
+  display: none; 
+  overflow: hidden; 
+  background-color: #f1f1f1; 
+} 
+</style> 
+</head> 
+<body> 
+ 
+<button type="button" class="collapsible">Topic 1- course contents <span class="caret"></span></button> 
+<div class="content"> 
+
+  <input type="checkbox"> 
+   
+  <ul>
+      <li><input type="checkbox">1</li>
+      <li><input type="checkbox">2</li>
+      <li><input type="checkbox">3</li>
+      <li><input type="checkbox">4</li>
+      <li><a href="www.ggogle.com">google</a></li>
+  </ul>
+  <p>Hi how are you..?</p>
+</div> 
+ 
+<button type="button" class="collapsible">Topic 2- course contents</button>
+<div class="content">
+  <ul>
+    <li><input type="checkbox">1</li>
+    <li><input type="checkbox">2</li>
+    <li><input type="checkbox">3</li>
+    <li><input type="checkbox">4</li>
+  </ul>
+</div>
+
+<button type="button" class="collapsible">Topic 3- course contents</button>
+<div class="content">
+  <ul>
+    <li><input type="checkbox">1</li>
+    <li><input type="checkbox">2</li>
+    <li><input type="checkbox">3</li>
+    <li><input type="checkbox">4</li>
+  </ul>
+</div>
+
+<button type="button" class="collapsible">Topic 4- course contents</button>
+<div class="content">
+  <ul>
+    <li><input type="checkbox">1</li>
+    <li><input type="checkbox">2</li>
+    <li><input type="checkbox">3</li>
+    <li><input type="checkbox">4</li>
+  </ul>
+</div>
+
+<button type="button" class="collapsible">Topic 5- course contents</button>
+<div class="content">
+  <ul>
+    <li><input type="checkbox">1</li>
+    <li><input type="checkbox">2</li>
+    <li><input type="checkbox">3</li>
+    <li><input type="checkbox">4</li>
+  </ul>
+</div>
+
+<script> 
+var collapsible = document.getElementsByClassName("collapsible"); 
+var i; 
+ 
+for (i = 0; i < collapsible.length; i++) { 
+  collapsible[i].addEventListener("click", function() { 
+    this.classList.toggle("active"); 
+    var content = this.nextElementSibling; 
+    if (content.style.display === "block") { 
+      content.style.display = "none"; 
+    } else { 
+      content.style.display = "block"; 
+    } 
+  }); 
+} 
+</script> 
+ 
+</body> 
+</html> 
