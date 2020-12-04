@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label>Choose Stream:</label>
+  </form>
+  <select id="strm" onchange="changeOptions(this)">
+    <option value="" selected="selected"></option>
+    <option value="Arts">Arts</option>
+    <option value="Commerce">Commerce</option>
+    <option value="Science">Science</option>
+  </select>
+
+
+    <form class="className" name="Arts" id="Arts" style="display:none">
+    <!---- THIS IS FORM 1---->
+
+    <label for="fname">History:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Geography:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+  </form>
+
+  <form class="className" name="Commerce" id="Commerce" style="display:none">
+    <!---- THIS IS FORM 2---->
+
+    <label for="fname">Accountancy:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">SP:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+  </form>
+
+  <form class="className" name="Science" id="Science" style="display:none">
+    <!---- THIS IS FORM 3---->
+
+    <label for="fname">Physics:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+    <label for="lname">Chemistry:</label><br>
+    <input type="text" id="lname" name="lname"><br><br>
+  </form>
+  </form>
+
+
+
+  <button type="submit" value="Submit" onclick="getResult()">Display Result</button>
+
+  <p id="firstname">hello</p>
+  <p id="lastname"></p>
+  <p id="stream"></p>
+  <p id="science"></p>
+
+  <script>
+
+    function changeOptions(selectEl) {
+      let selectedValue = selectEl.options[selectEl.selectedIndex].value;
+      let subForms = document.getElementsByClassName('className')
+      for (let i = 0; i < subForms.length; i += 1) {
+        if (selectedValue === subForms[i].name) {
+          subForms[i].setAttribute('style', 'display:block')
+        } else {
+          subForms[i].setAttribute('style', 'display:none')
+        }
+      }
+    }
+
+    function getResult() {
+      var fName = document.getElementById("fname").value;
+      document.getElementById("firstname").innerHTML = "First Name : " + fName;
+      
+      var Stream = document.getElementById("strm").value;
+      document.getElementById("stream").innerHTML = "Stream : " + Stream;
+     
+      var Science = document.getElementById("Science").value;
+      document.getElementById("science").innerHTML = "Science : " + phy + chem;
+      
+    }
+
+  
+  </script>
+
+
+</body>
+
+</html>

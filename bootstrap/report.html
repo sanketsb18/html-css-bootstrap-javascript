@@ -1,0 +1,41 @@
+<form">
+            <table>
+                <tr>
+                    <td> Name:  <input type="text" id="name1" ></td>
+                </tr>
+                <tr>
+                    <td> <strong> Marks </strong> </td>
+                </tr>
+                <tr>
+                    <td> English  <input type="text" id="eng" ></td>
+                </tr>
+                <tr>
+                    <td> Maths  <input type="text" id="mathss" ></td>
+                </tr>
+                <tr>
+                    <td> Physics  <input type="text" id="physs" ></td>
+                </tr>
+                <tr>
+                    <td> <input type="Button" id="subb"value="SUBMIT" onclick="getReport()"> </td>
+                </tr>
+            </table>
+        </form>
+        <p id="resname"></p>
+        <p id="getavg"></p>
+
+
+        <script>
+            function getReport() {
+    var name = document.getElementById('name1').value;
+    var eng = parseInt(document.getElementById('eng').value);
+    var mat = parseInt(document.getElementById('mathss').value);
+    var phy = parseInt(document.getElementById('physs').value);
+
+    var totalmarks = eng + mat + phy;
+
+    var percentage = (totalmarks *100) / 300;
+
+    document.getElementById('resname').innerHTML = name;
+    document.getElementById('getavg').innerHTML = percentage;
+}
+        </script>
